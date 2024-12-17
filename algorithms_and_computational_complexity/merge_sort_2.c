@@ -21,6 +21,7 @@ void MergeSort(int x[], int left, int right)
 {
     int mid, i, j, k;
 
+    //要素1の配列になったらreturn
     if(left >= right)
         return;
     
@@ -36,9 +37,6 @@ void MergeSort(int x[], int left, int right)
     for (i = mid + 1, j = right; i <= right; i++, j--)
         temp[i] = x[j];
     
-    printf(", left=%d, mid=%d, right=%d, この時点の配列tempは\n", left, mid, right);
-    printout(temp);
-
     i = left;
     j = right;
 
